@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WildTrail Udawalawe — Private Safari Experiences, Sri Lanka</title>
+<meta name="description" content="Premium private safari experiences in Udawalawe National Park, Sri Lanka. Local guides, private jeeps, elephant encounters.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" class="loader">
+  <div class="loader-inner">
+    <span class="loader-mark">WT</span>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-main">WILDTRAIL</span>
+      <span class="logo-sub">UDAWALAWE</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#safari">Safari</a>
+      <a href="#packages">Packages</a>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="tel:+94770000000" class="icon-btn" aria-label="Call us">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="btn btn-primary" id="bookNavBtn">Book Safari</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <input type="text" placeholder="Search safaris, packages, wildlife…">
+    <button class="icon-btn" id="searchClose">✕</button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#safari">Safari</a>
+  <a href="#packages">Packages</a>
+  <a href="#wildlife">Wildlife</a>
+  <a href="#experience">Experience</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <button class="btn btn-primary" id="mobileBookBtn">Book Safari</button>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_morning_at_udawalawa.jpg?width=2000')"></div>
+  <div class="hero-overlay"></div>
+
+  <span class="hero-vertical">WILDLIFE • ADVENTURE • SRI LANKA</span>
+
+  <div class="hero-content">
+    <p class="reveal-line hero-label">Udawalawe National Park<br>Sri Lanka</p>
+    <h1 class="hero-title">
+      <span class="reveal-line">Discover the wild.</span>
+      <span class="reveal-line">Create memories.</span>
+    </h1>
+    <p class="reveal-line hero-copy">Unforgettable wildlife journeys through the heart of Udawalawe — local guides, private jeeps and safari experiences shaped around you.</p>
+
+    <div class="hero-actions reveal-line">
+      <button class="btn btn-primary" id="bookHeroBtn">Book your safari</button>
+      <a href="#safari" class="btn btn-ghost">Explore safaris</a>
+      <button class="play-btn" id="playBtn" aria-label="Watch experience">
+        <span class="play-icon">▶</span> Watch experience
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-stats reveal-line">
+    <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years experience</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Happy guests</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">4.9/5</span><span class="stat-label">Guest rating</span></div>
+  </div>
+
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ TYPE SELECTOR (GLASS) ============ -->
+<section class="type-selector" id="safari">
+  <div class="glass-panel reveal-up">
+    <div class="type-header">
+      <h2>What kind of safari<br>are you looking for?</h2>
+      <p>Choose the experience that matches your adventure.</p>
+    </div>
+
+    <div class="type-grid">
+      <button class="type-card" data-type="morning">
+        <span class="type-icon">🌅</span>
+        <span class="type-title">Morning Safari</span>
+        <span class="type-desc">Sunrise game drives when the park is coolest and most active.</span>
+      </button>
+      <button class="type-card" data-type="evening">
+        <span class="type-icon">🌇</span>
+        <span class="type-title">Evening Safari</span>
+        <span class="type-desc">Golden light and elephants gathering near the reservoir.</span>
+      </button>
+      <button class="type-card" data-type="private">
+        <span class="type-icon">🚙</span>
+        <span class="type-title">Private Safari</span>
+        <span class="type-desc">Your own jeep and guide, paced entirely around you.</span>
+      </button>
+      <button class="type-card" data-type="fullday">
+        <span class="type-icon">🐘</span>
+        <span class="type-title">Full Day Safari</span>
+        <span class="type-desc">A complete day across the park, from dawn light to dusk.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED SAFARI CAROUSEL ============ -->
+<section class="featured" id="packages">
+  <div class="section-head reveal-up">
+    <h2>Explore Udawalawe</h2>
+    <p>Three ways to meet the park — pick the pace that suits your trip.</p>
+  </div>
+
+  <div class="carousel" id="carousel">
+    <button class="carousel-arrow left" id="carouselPrev" aria-label="Previous">←</button>
+
+    <div class="carousel-track" id="carouselTrack">
+      <!-- cards injected / present statically for no-js fallback -->
+      <article class="safari-card" data-index="0">
+        <div class="safari-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Eléphant-Uda_Walawe_National_Park_(1).JPG?width=1400')"></div>
+        <div class="safari-body">
+          <span class="safari-eyebrow">Morning Safari</span>
+          <h3>Sunrise among the elephants</h3>
+          <p>Enter the park at first light, when herds move down to the reservoir and the air is still cool.</p>
+          <div class="safari-meta">
+            <span>3–4 Hours</span><span>Private Jeep</span><span>From $45</span>
+          </div>
+          <button class="btn btn-outline">Explore safari</button>
+        </div>
+      </article>
+
+      <article class="safari-card" data-index="1">
+        <div class="safari-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Game_Drive_(235983849).jpeg?width=1400')"></div>
+        <div class="safari-body">
+          <span class="safari-eyebrow">Evening Safari</span>
+          <h3>Golden hour on the plains</h3>
+          <p>Watch the park turn amber as elephants, buffalo and birds settle in for the evening.</p>
+          <div class="safari-meta">
+            <span>3–4 Hours</span><span>Private Jeep</span><span>From $45</span>
+          </div>
+          <button class="btn btn-outline">Explore safari</button>
+        </div>
+      </article>
+
+      <article class="safari-card" data-index="2">
+        <div class="safari-img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Udawalawe_Elephant_Transit_Home_2017-10-27_-_9.jpg?width=1400')"></div>
+        <div class="safari-body">
+          <span class="safari-eyebrow">Full Day Safari</span>
+          <h3>The whole park, unhurried</h3>
+          <p>A full circuit of Udawalawe with a midday break, built for serious wildlife watching.</p>
+          <div class="safari-meta">
+            <span>8 Hours</span><span>Private Jeep</span><span>From $85</span>
+          </div>
+          <button class="btn btn-outline">Explore safari</button>
+        </div>
+      </article>
+    </div>
+
+    <button class="carousel-arrow right" id="carouselNext" aria-label="Next">→</button>
+  </div>
+</section>
+
+<!-- ============ WILDLIFE ============ -->
+<section class="wildlife" id="wildlife">
+  <div class="section-head reveal-up">
+    <h2>Meet the wild</h2>
+    <p>Udawalawe is home to some of Sri Lanka's most incredible wildlife.</p>
+  </div>
+
+  <div class="wildlife-grid">
+    <article class="wild-card size-lg reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eléphant-Uda_Walawe_National_Park_(1).JPG?width=1200" alt="Asian elephant in Udawalawe">
+      <div class="wild-overlay">
+        <span class="wild-index">01</span>
+        <h3>Asian Elephant</h3>
+        <p>Udawalawe's most iconic residents — herds of 600 roam the open plains.</p>
+      </div>
+    </article>
+
+    <article class="wild-card size-sm reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_leopard_(Panthera_pardus_kotiya)_at_Wilpattu_National_Park.jpg?width=900" alt="Sri Lankan leopard">
+      <div class="wild-overlay">
+        <span class="wild-index">02</span>
+        <h3>Leopard</h3>
+        <p>Elusive and solitary — a rare, unforgettable sighting.</p>
+      </div>
+    </article>
+
+    <article class="wild-card size-sm reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Water_buffalo_and_mountains.jpg?width=900" alt="Water buffalo in Udawalawe">
+      <div class="wild-overlay">
+        <span class="wild-index">03</span>
+        <h3>Water Buffalo</h3>
+        <p>Wallowing herds along the reservoir's edge.</p>
+      </div>
+    </article>
+
+    <article class="wild-card size-md reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Krokodile_im_Uda_Walawe_National_Park_1.jpg?width=1100" alt="Crocodile in Udawalawe">
+      <div class="wild-overlay">
+        <span class="wild-index">04</span>
+        <h3>Crocodile</h3>
+        <p>Mugger crocodiles bask along the Udawalawe reservoir.</p>
+      </div>
+    </article>
+
+    <article class="wild-card size-md reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_Peacock_closeup.jpg?width=1100" alt="Peacock in Sri Lanka">
+      <div class="wild-overlay">
+        <span class="wild-index">05</span>
+        <h3>Peacock</h3>
+        <p>Sri Lanka's national bird, displaying at dawn.</p>
+      </div>
+    </article>
+
+    <article class="wild-card size-sm reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lankan_spotted_deer_(Axis_axis_ceylonensis)_female_and_male.jpg?width=900" alt="Spotted deer in Sri Lanka">
+      <div class="wild-overlay">
+        <span class="wild-index">06</span>
+        <h3>Spotted Deer</h3>
+        <p>Grazing herds that share the plains with leopards and elephants.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CINEMATIC FULL-WIDTH ============ -->
+<section class="cinematic" id="experience">
+  <div class="cinematic-bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Eléphant-Uda_Walawe_National_Park_(1).JPG?width=2000')"></div>
+  <div class="cinematic-overlay"></div>
+
+  <div class="cinematic-content">
+    <h2 class="reveal-up">One day.<br>A thousand stories.</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="t-time">05:30</span>
+        <span class="t-line"></span>
+        <span class="t-text">Meet your guide</span>
+      </div>
+      <div class="timeline-item">
+        <span class="t-time">06:15</span>
+        <span class="t-line"></span>
+        <span class="t-text">Enter the park</span>
+      </div>
+      <div class="timeline-item">
+        <span class="t-time">09:00</span>
+        <span class="t-line"></span>
+        <span class="t-text">Wildlife encounters</span>
+      </div>
+      <div class="timeline-item">
+        <span class="t-time">12:00</span>
+        <span class="t-line"></span>
+        <span class="t-text">Return with memories</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why">
+  <div class="section-head reveal-up">
+    <h2>Why safari with us?</h2>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card reveal-up">
+      <span class="why-icon">🧭</span>
+      <h3>Local experts</h3>
+      <p>Guides who know Udawalawe from the inside out — where the herds move, and when.</p>
+    </div>
+    <div class="why-card reveal-up">
+      <span class="why-icon">🚗</span>
+      <h3>Private jeeps</h3>
+      <p>Your safari, your pace, your experience — never shared with strangers.</p>
+    </div>
+    <div class="why-card reveal-up">
+      <span class="why-icon">🌿</span>
+      <h3>Wildlife first</h3>
+      <p>Respectful, low-impact encounters with nature, always at a safe distance.</p>
+    </div>
+    <div class="why-card reveal-up">
+      <span class="why-icon">💬</span>
+      <h3>Easy booking</h3>
+      <p>Reserve your safari directly through WhatsApp — no forms, no waiting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATISTICS ============ -->
+<section class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-block">
+      <span class="stat-block-num" data-count="12" data-suffix="+">0</span>
+      <span class="stat-block-label">Years Experience</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block-num" data-count="5000" data-suffix="+">0</span>
+      <span class="stat-block-label">Guests</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block-num" data-count="40" data-suffix="+">0</span>
+      <span class="stat-block-label">Wildlife Species</span>
+    </div>
+    <div class="stat-block">
+      <span class="stat-block-num" data-count="98" data-suffix="%">0</span>
+      <span class="stat-block-label">Guest Recommendations</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="section-head reveal-up">
+    <h2>Moments from the park</h2>
+    <p>A closer look at life inside Udawalawe.</p>
+  </div>
+
+  <div class="masonry">
+    <div class="mason-item reveal-up" style="grid-row: span 2;">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eléphant-Uda_Walawe_National_Park_(1).JPG?width=900" alt="Elephant">
+      <span class="mason-caption">Elephant · Udawalawe Plains</span>
+    </div>
+    <div class="mason-item reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Game_Drive_(235983849).jpeg?width=800" alt="Safari jeep">
+      <span class="mason-caption">Safari Jeep · Game Drive</span>
+    </div>
+    <div class="mason-item reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Blue-tailed_Bee-eater_on_a_branch_in_Udawalawe,_Sri_Lanka_06.jpg?width=800" alt="Blue-tailed bee-eater">
+      <span class="mason-caption">Blue-tailed Bee-eater</span>
+    </div>
+    <div class="mason-item reveal-up" style="grid-row: span 2;">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_morning_at_udawalawa.jpg?width=900" alt="Sunrise landscape">
+      <span class="mason-caption">Sunrise · Udawalawe Reservoir</span>
+    </div>
+    <div class="mason-item reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dead_Tree_in_the_Udawalawe_National_Park.jpg?width=800" alt="Park road and landscape">
+      <span class="mason-caption">Park Road · Dry Season</span>
+    </div>
+    <div class="mason-item reveal-up">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udawalawe_Elephant_Transit_Home_2017-10-27_-_9.jpg?width=800" alt="Elephant herd">
+      <span class="mason-caption">Elephant Herd · Transit Home</span>
+    </div>
+  </div>
+
+  <div class="gallery-cta reveal-up">
+    <button class="btn btn-outline">View full gallery</button>
+  </div>
+</section>
+
+<!-- ============ ABOUT / STORY ============ -->
+<section class="story">
+  <div class="story-image reveal-up">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udawalawe_Elephant_Transit_Home_2017-10-27_-_9.jpg?width=1200" alt="Our safari team in Udawalawe">
+  </div>
+  <div class="story-content reveal-up">
+    <span class="story-label">Our Story</span>
+    <h2>Born beside the wild.</h2>
+    <p>WildTrail was started by guides who grew up on the edge of Udawalawe National Park. We know its roads, its seasons, and its elephants the way most people know their own neighbourhood — because it is one.</p>
+    <p>Every safari we run is locally operated, small in scale, and built around genuine respect for the animals we share the park with. No large convoys, no rushing — just time in the wild, done properly.</p>
+    <button class="btn btn-primary">Meet our team</button>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="section-head reveal-up">
+    <h2>Stories from the wild</h2>
+  </div>
+
+  <div class="review-slider">
+    <button class="review-arrow left" id="reviewPrev" aria-label="Previous review">←</button>
+
+    <div class="review-track" id="reviewTrack">
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p>The most unforgettable morning of our Sri Lanka trip. Our guide was incredible and we saw elephants within minutes.</p>
+        <span class="review-author">Sophie · Netherlands</span>
+      </div>
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p>Private jeep made all the difference — we could stop and wait as long as we wanted at every sighting.</p>
+        <span class="review-author">Marcus · Germany</span>
+      </div>
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p>Booked entirely over WhatsApp the night before. Easiest, best-organised safari of our whole trip.</p>
+        <span class="review-author">Aiko · Japan</span>
+      </div>
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p>Our guide's knowledge of elephant behaviour turned a game drive into a real education.</p>
+        <span class="review-author">Daniel · United Kingdom</span>
+      </div>
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p>Saw a leopard on our evening safari — something our guide said happens maybe once a month. Pure luck, pure magic.</p>
+        <span class="review-author">Priya · India</span>
+      </div>
+    </div>
+
+    <button class="review-arrow right" id="reviewNext" aria-label="Next review">→</button>
+  </div>
+</section>
+
+<!-- ============ BOOKING CTA ============ -->
+<section class="booking" id="contact">
+  <div class="booking-bg" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_morning_at_udawalawa.jpg?width=2000')"></div>
+  <div class="booking-overlay"></div>
+
+  <div class="booking-content reveal-up">
+    <h2>Your wild adventure<br>starts here.</h2>
+    <p>Tell us your preferred date and we'll help you plan the perfect safari.</p>
+    <button class="btn btn-primary btn-lg" id="openBookingBtn">Request a safari</button>
+  </div>
+</section>
+
+<!-- ============ BOOKING MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-glass" id="modalGlass">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <h3>Request your safari</h3>
+    <p class="modal-sub">We'll confirm availability directly on WhatsApp.</p>
+
+    <form id="bookingForm">
+      <div class="form-row">
+        <label>Name
+          <input type="text" name="name" required placeholder="Your full name">
+        </label>
+        <label>WhatsApp number
+          <input type="tel" name="whatsapp" required placeholder="+94 77 000 0000">
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Safari date
+          <input type="date" name="date" required>
+        </label>
+        <label>Number of guests
+          <input type="number" name="guests" min="1" value="2" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Safari type
+          <select name="type">
+            <option>Morning Safari</option>
+            <option>Evening Safari</option>
+            <option>Private Safari</option>
+            <option>Full Day Safari</option>
+          </select>
+        </label>
+        <label>Pickup location
+          <input type="text" name="pickup" placeholder="Hotel / area name">
+        </label>
+      </div>
+      <label class="full">Message
+        <textarea name="message" rows="3" placeholder="Anything else we should know?"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-lg full">Book via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-main">WILDTRAIL</span>
+      <span class="logo-sub">UDAWALAWE</span>
+      <p>Locally operated private safaris in Udawalawe National Park, Sri Lanka.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#safari">Safari</a>
+      <a href="#packages">Packages</a>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#experience">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Udawalawe, Sri Lanka</p>
+      <a href="https://wa.me/94770000000">WhatsApp: +94 77 000 0000</a>
+      <a href="tel:+94770000000">+94 77 000 0000</a>
+      <a href="mailto:hello@wildtrailudawalawe.com">hello@wildtrailudawalawe.com</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 WildTrail Udawalawe</span>
+    <span>Made for the wild.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
